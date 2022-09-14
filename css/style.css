@@ -9,10 +9,10 @@ html {
 }
 
 body {
-    /* Сглаживание шрифта */
     font-family: 'Roboto', sans-serif;
+    /* Сглаживание шрифта */
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-font-smoothing: grayscale;
     color: #000000;
 }
 
@@ -42,7 +42,7 @@ a {
     color: black;
 }
 
-wrapper {
+.wrapper {
     min-height: 100%;
     width: 100%;
     overflow: hidden;
@@ -64,23 +64,23 @@ wrapper {
     align-items: center;
     padding-top: 18px;
     padding-bottom: 21px;
+    color: #000000;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serifS;
 }
 
 .logo__img-wrap {
-    border: 2px solid #000000;
     height: 60px;
     width: 60px;
     overflow: hidden;
+    display: flex;
     border-radius: 50%;
     margin-right: 16px;
     align-items: center;
-    display: flex;
+    border: 2px solid black;
     flex-shrink: 0;
 }
 
@@ -88,6 +88,8 @@ wrapper {
     width: 70%;
     height: 80%;
     object-fit: contain;
+    color: #000000;
+    flex-shrink: 0;
 }
 
 .logo__desc {
@@ -104,35 +106,34 @@ wrapper {
     font-size: 14px;
 }
 
-.nav {
-    margin: 0px 30px;
-}
-
 .nav__list {
     display: flex;
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .nav__iteam {
     margin-right: 54px;
     border-bottom: 1px solid transparent;
-    transition: all 0.3s;
+    transition: all 0.4s;
 }
 
 .nav__iteam:hover {
     border-color: #000000;
 }
 
-.nav__iteam:last-child {
-    margin-right: 0;
+.nav__iteam :last-child {
+    margin-right: 0px;
 }
 
-.nav__iteam:hover .nav__link {
+.nav__iteam :hover {
     text-shadow: 0px 0px 1px #000000;
 }
 
 .tel {
     font-weight: 700;
     font-size: 18px;
+    line-height: 21px;
 }
 
 .cart {
@@ -154,11 +155,12 @@ wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    transition: all 0.4s;
 }
 
 .cart__img-wrap:hover {
-    background: #d89715;
-    transition: all 0.3s;
+    background: #a87309;
 }
 
 .cart__img-wrap:active {
@@ -172,9 +174,9 @@ wrapper {
 }
 
 .cart__price {
-    margin: 0px 18px 0px 13px;
     font-weight: 700;
-    font-size: 0;
+    margin-left: 14px;
+    margin-right: 18px;
 }
 
 .cart__value {
@@ -182,22 +184,23 @@ wrapper {
 }
 
 .cart__btn {
-    display: block;
-    border: none;
-    padding: 0;
-    background: transparent;
     cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
     width: 10px;
     height: 10px;
-    display: flex;
     align-items: center;
     justify-content: center;
+    display: flex;
 }
 
+
+
 .cart__btn-img {
+    object-fit: contain;
     width: 100%;
     height: 100%;
-    object-fit: contain;
 }
 
 /* HERO */
@@ -231,18 +234,60 @@ wrapper {
     z-index: -10;
 }
 
+.hero__content {}
+
+.title {
+    display: inline-block;
+    position: absolute;
+    top: 150px;
+    bottom: 339px;
+    left: 215px;
+    right: 143px;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.subtitle__herosubtitle {
+    display: inline-block;
+    position: absolute;
+    top: 274px;
+    bottom: 266px;
+    left: 215px;
+    right: 166px;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.hero__btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 256px;
+    height: 48px;
+    top: 338px;
+    bottom: 187px;
+    left: 215px;
+    right: 314px;
+    background: #FFBF42;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.14);
+    border-radius: 50px;
+    transition: all 0.4s;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.hero__btn:hover {
+    background: #eca71e;
+}
+
 .hero__slider {
     flex: 0 0 50%;
     transform: translate(-100%, 0%);
     overflow: hidden;
-    box-shadow: -4px 4px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
     border-radius: 500px 0px 0px 500px;
-}
 
-.hero__slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .dots {
@@ -257,19 +302,23 @@ wrapper {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #FFFFFF;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.4s;
+    background: #FFFFFF;
 }
 
-.dot.active {
-    background: #FFBF42;
+.dot:hover {
+    background: #FFBF42
 }
 
 .dot:last-child {
     margin-right: 0px;
 }
 
-.dot:hover {
-    ba
+.active {}
+
+.hero__slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
